@@ -11,14 +11,12 @@ module.exports = () => {
             filename: "bundle.js"        
         },
 
-        resolve: {
-            // Add '.ts' and '.tsx' as resolvable extensions.
+        resolve: {            
             extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"],        
         },        
 
         module: {
-            loaders: [
-                // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.                
+            loaders: [                
                 {
                     test: /\.tsx?$/,
                     loaders : ['babel-loader', 'awesome-typescript-loader'],
